@@ -93,3 +93,6 @@ button {
   background: var(--primary-light);
   color: var(--accent-dark);
 }
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
