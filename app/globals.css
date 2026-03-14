@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ── CoreInventory Color System ── */
+  --background:     #F5EFE6;
+  --surface:        #FDF8F2;
+  --sidebar:        #EDE0CE;
+
+  --primary:        #C17F3E;
+  --primary-hover:  #A8692E;
+  --primary-light:  #F5E6D0;
+
+  --accent-dark:    #6B4226;
+  --accent-medium:  #9C6B3C;
+
+  --text-primary:   #3D2B1F;
+  --text-muted:     #9C8572;
+  --text-light:     #C4A882;
+
+  --border:         #E8D5BB;
+  --divider:        #F0E4D0;
+
+  --success:        #7A9E7E;
+  --warning:        #C9973A;
+  --danger:         #B85C4A;
+  --info:           #7A94A8;
+
+  --shadow:         rgba(97, 60, 20, 0.08);
+
+  --foreground:     #3D2B1F;
+}
+
+/* No dark mode — always light creamish */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-medium);
+}
+
+/* Input focus globally */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(193, 127, 62, 0.12);
+}
+
+/* Button base */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Selection color */
+::selection {
+  background: var(--primary-light);
+  color: var(--accent-dark);
+}
